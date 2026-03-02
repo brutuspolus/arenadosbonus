@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/jpeg" href="right.jpg">
+  <title>Arena dos Bónus</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- ======================== AGE GATE ======================== -->
+  <div id="age-gate" class="age-gate gladiator-texture">
+    <div class="arena-sand"></div>
+    <div class="age-gate-overlay"></div>
+    <div class="age-gate-card gladiator-card">
+      <div class="gladiator-header-gold gladiator-header-pattern card-header">
+        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="shield-icon"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/><path d="m9 12 2 2 4-4"/></svg>
+      </div>
+      <div class="age-gate-body">
+        <h2 class="title-gladiator age-gate-title">VERIFICAÇÃO DE IDADE</h2>
+        <p class="age-gate-text">Este site contém conteúdo relacionado com jogos de azar e apostas online.</p>
+        <p class="age-gate-subtext">Ao continuar, confirma que tem pelo menos <span class="text-amber">18 anos de idade</span> e que o jogo online é legal na sua jurisdição.</p>
+        <button id="age-confirm" class="btn-gladiator age-gate-btn">TENHO 18+ ANOS — ENTRAR</button>
+        <a href="https://www.google.com" class="age-gate-decline">Sou menor de idade — Sair</a>
+        <p class="age-gate-footer">Jogue com responsabilidade. Se sente que tem um problema com jogo, visite <a href="https://www.begambleaware.org" target="_blank" rel="noopener noreferrer" class="begamble-link">BeGambleAware.org</a></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================== MAIN CONTENT ======================== -->
+  <div id="main-content" class="main-content gladiator-texture" style="display:none;">
+    <div class="arena-sand"></div>
+    <div class="gradient-overlay"></div>
+    <div class="hero-image"></div>
+
+    <div class="page-wrapper">
+      <div class="container">
+        <!-- Page Header -->
+        <div class="page-header arena-border">
+          <h1 class="title-gladiator page-title">ARENA DOS BÓNUS</h1>
+        </div>
+
+        <!-- Cards Grid -->
+        <div id="cards-grid" class="cards-grid"></div>
+
+        <!-- Bottom divider -->
+        <div class="bottom-divider">
+          <div class="divider-line"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
