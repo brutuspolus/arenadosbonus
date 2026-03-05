@@ -173,44 +173,7 @@ const sponsorCards = [
     ],
   },
 
-  /* ——— CARD 5: BETISTA ——— */
-  {
-    name: 'BETISTA',
-    headerColor: 'gladiator-header-red',
-    logoUrl: 'https://www.casiqo.com/en/wp-content/uploads/sites/2/2025/06/betista-logo.svg',
-    logoSize: 'large',
-    tagline: '100% up to €1,000 + 100 Rodadas Grátis',
-    perks: [],
-    affiliateLink: 'https://tracking-iplaywise.com/click?o=32&a=443',
-    statsColor: 'stats-badge-red',
-    stats: [
-      { label: 'Dep. mínimo',    value: '10€' },
-      { label: 'Valor do bónus', value: '100% até €1k' },
-      { label: 'Rodadas grátis', value: '100 FS' },
-      { label: 'Tempo de levant.', value: '1-3 dias' },
-      { label: 'Rollover bónus', value: '35x' },
-      { label: 'Rollover FS',    value: '40x' },
-      { label: 'Limite de levant.', value: '€12k/mês' },
-      { label: 'Cripto',         value: 'Sim' },
-      { label: 'Clube VIP',      value: 'Sim' },
-      { label: 'Mét. depósito',  value: 'Visa, MC, Sofort, MiFinity, Cripto +' },
-    ],
-    backNotes: [
-      '1º Depósito: 100% até €1.000 + 100 Rodadas Grátis',
-      'Rollover do bónus: 35x',
-      'Rollover das rodadas grátis: 40x',
-      'Depósito mínimo: €10',
-      'Limite de levantamento: €12.000/mês',
-      'Métodos: Visa, MasterCard, Sofort, eZeeWallet, MiFinity, Cripto',
-      'Sem bónus de registo gratuito',
-      'Sem rodadas grátis sem depósito',
-      'Casino ao vivo, App móvel, Clube de fidelidade',
-      'Estabelecido: 2025 | Licença: Curaçao',
-      '18+ | T&C Aplicam-se',
-    ],
-  },
-
-  /* ——— CARD 6: STELARIO ——— */
+  /* ——— CARD 5: STELARIO ——— */
   {
     name: 'STELARIO',
     headerColor: 'gladiator-header-cream',
@@ -249,7 +212,7 @@ const sponsorCards = [
     ],
   },
 
-  /* ——— CARD 7: JOKER8 ——— */
+  /* ——— CARD 6: JOKER8 ——— */
   {
     name: 'JOKER8',
     headerColor: 'gladiator-header-purple',
