@@ -247,6 +247,41 @@ const sponsorCards = [
       '18+ | T&C Aplicam-se',
     ],
   },
+
+  /* ——— CARD 7: TWIN ——— */
+  {
+    name: 'TWIN',
+    headerColor: 'gladiator-header-darkblue',
+    logoUrl: 'https://twin.gcdn.co/assets/logo.DgjvQ9fc.svg',
+    tagline: '100% Bónus + 100 Freespins',
+    perks: [],
+    affiliateLink: 'https://tracking-iplaywise.com/click?o=23&a=443',
+    statsColor: 'stats-badge-blue',
+    stats: [
+      { label: 'Dep. mínimo',    value: '15€' },
+      { label: 'Valor do bónus', value: '100% até 500€' },
+      { label: 'Rodadas grátis', value: '100 FS' },
+      { label: 'Tempo de levant.', value: '0-24h' },
+      { label: 'Limite de levant.', value: '€50k/mês' },
+      { label: 'Tempo pendente', value: '0-96h' },
+      { label: 'Cripto',         value: 'Sim' },
+      { label: 'Apps móveis',    value: 'iOS & Android' },
+      { label: 'Desportos',      value: 'Sim' },
+      { label: 'Mét. depósito',  value: 'Visa, MBWAY, MC, Skrill, MiFinity, BTC +' },
+    ],
+    backNotes: [
+      '100% Bónus + 100 Freespins "Gates of Olympus 1000" no 1º depósito',
+      'Depósito mínimo: €15 | Sem taxas de depósito',
+      'Sem taxas de levantamento',
+      'Limites: €10.000/dia, €50.000/mês',
+      'Carteiras digitais: 24-48h | Banco: 1-7 dias',
+      'Tempo pendente: 0-96h | Sem levantamentos ao fim de semana',
+      'Métodos: Visa, MBWAY, MC, Skrill, Neteller, MiFinity, eZeeWallet, MuchBetter',
+      'Cripto: Bitcoin, ETH, Tether, LTC, DOGE, TRON',
+      'Casino ao vivo, Apps móveis (iOS & Android), Desportos',
+      '18+ | T&C Aplicam-se',
+    ],
+  },
 ];
 
 
