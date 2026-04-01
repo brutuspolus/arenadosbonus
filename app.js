@@ -42,7 +42,7 @@ const sponsorCards = [
   {
     name: 'SMOKING ACE',
     headerColor: 'gladiator-header-black',
-    logoUrl: 'https://smokace12.co/assets/images/logo-Fxnt_nuT.webp',
+    logoUrl: 'https://smokace.com/assets/images/logo-Fxnt_nuT.webp',
     tagline: '125% no 1º Depósito + 125 Freespins',
     perks: [],
     promoCode: 'Brutus',
@@ -141,7 +141,7 @@ const sponsorCards = [
   {
     name: 'RIOACE',
     headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://rioace23.co/assets/images/logo-SZWvIA3N.webp',
+    logoUrl: 'https://rioace.com/assets/images/logo-SZWvIA3N.webp',
     tagline: '400% Bónus + 350 Freespins',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIhZNvOoThXn9GNd7ZgqdRLk/1/',
@@ -177,7 +177,7 @@ const sponsorCards = [
   {
     name: 'STELARIO',
     headerColor: 'gladiator-header-cream',
-    logoUrl: 'https://boomaff.com/wp-content/uploads/2020/12/%D0%94%D0%B8%D0%B7%D0%B0%D0%B9%D0%BD-%D0%B1%D0%B5%D0%B7-%D0%BD%D0%B0%D0%B7%D0%B2%D0%B0%D0%BD%D0%B8%D1%8F-18.png',
+    logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTI2e1CwtHOwxketJFLgWPwHjEXPsCRXttkFw&s',
     tagline: '100% até 300€ + 100 Freespins',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjsP_BZ5nQwFmNd7ZgqdRLk/1/',
