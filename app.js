@@ -42,7 +42,7 @@ const sponsorCards = [
   {
     name: 'SMOKING ACE',
     headerColor: 'gladiator-header-black',
-    logoUrl: 'https://i.imgur.com/uoGk3GI.jpeg',
+    logoUrl: 'https://i.imgur.com/IzGDLVV.png',
     tagline: '125% no 1º Depósito + 125 Freespins',
     perks: [],
     promoCode: 'Brutus',
