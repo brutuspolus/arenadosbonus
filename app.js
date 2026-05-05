@@ -42,7 +42,7 @@ const sponsorCards = [
   {
     name: 'SMOKING ACE',
     headerColor: 'gladiator-header-black',
-    logoUrl: 'https://smokace.com/assets/images/logo-Fxnt_nuT.webp',
+    logoUrl: 'https://i.imgur.com/auqBmYC.png',
     tagline: '125% no 1º Depósito + 125 Freespins',
     perks: [],
     promoCode: 'Brutus',
@@ -81,7 +81,7 @@ const sponsorCards = [
   {
     name: 'WINHUGO',
     headerColor: 'gladiator-header-limegreen',
-    logoUrl: 'https://dibv43v5qvczy.cloudfront.net/tenant2c6d3f79-41c3-4a38-99bb-0efbe511b6c2/MyqJnaYEE8nUnSdYSpvOY9DM4ZzCvQPbmw8LGTdl.png',
+    logoUrl: 'https://i.imgur.com/YHwmobw.jpeg',
     tagline: '100% até 1000€ + 100 Freespins',
     perks: [],
     promoCode: 'brutus',
@@ -113,7 +113,7 @@ const sponsorCards = [
   {
     name: 'LOLLYSPINS 🍭',
     headerColor: 'gladiator-header-pink',
-    logoUrl: 'https://lollyspins7.com/assets/images/logo-VIEBohb5.svg',
+    logoUrl: 'https://i.imgur.com/rqX4v6r.jpeg',
     tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIiBYt4A521OEWNd7ZgqdRLk/1/',
@@ -141,7 +141,7 @@ const sponsorCards = [
   {
     name: 'RIOACE',
     headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://rioace.com/assets/images/logo-SZWvIA3N.webp',
+    logoUrl: 'https://i.imgur.com/DEkniim.png',
     tagline: '400% Bónus + 350 Freespins',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIhZNvOoThXn9GNd7ZgqdRLk/1/',
