@@ -177,7 +177,7 @@ const sponsorCards = [
   {
     name: 'STELARIO',
     headerColor: 'gladiator-header-cream',
-    logoUrl: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRw19Ct9Nm2_89RRt-JcEsQyWhtaux6xKTp4g&s',
+    logoUrl: 'https://i.imgur.com/In0xlhg.png',
     tagline: '100% até 300€ + 100 Freespins',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjsP_BZ5nQwFmNd7ZgqdRLk/1/',
