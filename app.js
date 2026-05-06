@@ -282,6 +282,34 @@ const sponsorCards = [
       '18+ | T&C Aplicam-se',
     ],
   },
+
+  /* ——— CARD 8: DBbet ⚽ ——— */
+  {
+    name: 'DBbet ⚽',
+    headerColor: 'gladiator-header-pink',
+    logoUrl: 'https://i.imgur.com/fn4WVIY.jpeg',
+    tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
+    perks: [],
+    affiliateLink: 'https://dbbt.me/BRUTUS',
+    statsColor: 'stats-badge-pink',
+    stats: [
+      { label: 'Dep. mínimo',    value: '10€' },
+      { label: 'Cashback',       value: '35%' },
+      { label: 'Valor do bónus', value: '100% até €300' },
+      { label: 'Rodadas grátis', value: '30 FS' },
+      { label: 'Tempo de levant.', value: '0-24h' },
+      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, BTC +' },
+    ],
+    backNotes: [
+      'Depósito mínimo: 25€',
+      '1º depósito: 100% de bônus + 100 Freespins Wanted Dead or a Wild (Hacksaw)',
+      '2º depósito: 80% de bônus + 50 Freespins Razor Returns (Push Gaming)',
+      '3º depósito: 70% de bônus + 100 Freespins Duel at Dawn (Hacksaw)',
+      '4º depósito: 50% de bônus',
+      '5º depósito: 100% de bônus + 100 Freespins Pirate Bonanza (Hacksaw)',
+      '24/7 Suporte ao vivo (para ajuda com rodadas grátis)',
+    ],
+  },
 ];
 
 
