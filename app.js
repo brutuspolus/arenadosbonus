@@ -287,9 +287,10 @@ const sponsorCards = [
   {
     name: 'DBbet ⚽',
     headerColor: 'gladiator-header-pink',
-    logoUrl: 'https://i.imgur.com/0UHnroE.jpeg',
+    logoUrl: 'https://i.imgur.com/V3rhnV9.png',
     tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
     perks: [],
+    promoCode: 'BRUTUS',
     affiliateLink: 'https://dbbt.me/BRUTUS',
     statsColor: 'stats-badge-pink',
     stats: [
