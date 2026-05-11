@@ -313,7 +313,7 @@ const sponsorCards = [
   {
     name: 'SpinandFlix 🏋️',
     headerColor: 'gladiator-header-black',
-    logoUrl: 'https://i.imgur.com/iohTz8Y.png',
+    logoUrl: 'https://i.imgur.com/Cks2QxQ.png',
     tagline: '200% Bónus até €1000 & 350 Rodadas Grátis',
     perks: [],
     affiliateLink: 'https://spinandflix.goaffnk.com/click?campaign_id=17&pub_id=12',
