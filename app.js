@@ -292,7 +292,7 @@ const sponsorCards = [
     perks: [],
     promoCode: 'BRUTUS',
     affiliateLink: 'https://dbbt.me/BRUTUS',
-    statsColor: 'stats-badge-pink',
+    statsColor: 'stats-badge-cream',
     stats: [
       { label: 'Dep. mínimo',    value: '10€' },
       { label: 'Valor do bónus', value: '100% até €300' },
@@ -306,6 +306,28 @@ const sponsorCards = [
       ' 3. O bónus será creditado automaticamente após a realização do depósito, desde que os dados pessoais do cliente tenham sido preenchidos na íntegra em A Minha Conta e o seu número de telefone tenha sido ativado.',
       ' 4. Antes de fazer um depósito, deve de certificar-se de que concordou em receber bónus do casino nas configurações da sua conta em A Minha Conta ou diretamente na página Depósito.',
       '24/7 Suporte ao vivo (para ajuda com rodadas grátis)',
+    ],
+  },
+
+    /* ——— CARD 9: SpinandFlix 🏋️ ——— */
+  {
+    name: 'SpinandFlix 🏋️',
+    headerColor: 'gladiator-header-black',
+    logoUrl: 'https://i.imgur.com/L54LO5A.png',
+    tagline: '200% Bónus até €1000 & 350 Rodadas Grátis',
+    perks: [],
+    affiliateLink: 'https://spinandflix.goaffnk.com/click?campaign_id=17&pub_id=12',
+    statsColor: 'stats-badge-silver',
+    stats: [
+      { label: 'Dep. mínimo',    value: '20€' },
+      { label: 'Valor do bónus', value: '200% até €1000' },
+      { label: 'Tempo de levant.', value: '0-48h' },
+      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, BTC +' },
+    ],
+    backNotes: [
+      ' 1. O valor do bónus deve ser apostado 35x exclusivamente em slots',
+      ' 2. Bónus Máximo: 1000€',
+      ' 3. Prazo: 30 dias para cumprir os requisitos a partir da atribuição do bónus.',
     ],
   },
 ];
