@@ -216,9 +216,11 @@ const sponsorCards = [
   {
     name: 'HugoBets',
     headerColor: 'gladiator-header-purple',
-    logoUrl: 'https://i.imgur.com/KK8gNBC.png',
+    logoUrl: 'https://i.imgur.com/Nmr7ocH.png',
     tagline: 'Casino Cripto & Ao Vivo',
     perks: [],
+    promoCode: 'brutus',
+    badgeText: 'Bónus Sem Wager',
     affiliateLink: 'https://partners.hbetpartners.com/v2/text/241/38/5d35638d-545f-11f1-a1b8-f6136488bd8f/1',
     statsColor: 'stats-badge-purple',
     stats: [
@@ -238,8 +240,6 @@ const sponsorCards = [
       'Oferta limitada a um bónus por jogador, agregado familiar, conta, endereço, computador ou IP',
       'A aposta máxima com um bónus ativo é de 5 €',
       'Os ganhos dos Giros Grátis estão sujeitos a um requisito de aposta de 1×',
-      'Carteiras digitais: 0-24h | Banco: 3-5 dias | Cartões: 3-5 dias',
-      'Tempo pendente: 0-48h',
       'Depósito: Visa, MC, Skrill, Neteller, eZeeWallet, MiFinity, MuchBetter, Paysafecard, Siru Mobile, BTC, ETH, USDT, LTC, DOGE, TRON',
       'Levantamento: Visa, MC, Skrill, Neteller, Payz, Jeton, MiFinity, MuchBetter, eZeeWallet, Pay4Fun, Pix, BTC, ETH, USDT, LTC, TRON, DOGE',
       "Fornecedores: Pragmatic Play, Play'n GO, Evolution, NetEnt, Playtech, Hacksaw, Push Gaming, Nolimit City e mais",
