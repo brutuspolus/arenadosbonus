@@ -316,7 +316,7 @@ const sponsorCards = [
     logoUrl: 'https://i.imgur.com/Ph4bXZv.png',
     tagline: '200% Bónus até €1000 & 350 Rodadas Grátis',
     perks: [],
-    affiliateLink: 'https://spinandflix.goaffnk.com/click?campaign_id=17&pub_id=12',
+    affiliateLink: 'https://partners.meratrack.xyz/click?o=723&a=1091',
     statsColor: 'stats-badge-silver',
     stats: [
       { label: 'Dep. mínimo',    value: '20€' },
