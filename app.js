@@ -309,25 +309,28 @@ const sponsorCards = [
     ],
   },
 
-    /* ——— CARD 9: SpinandFlix 🏋️ ——— */
+    /* ——— CARD 9: Spinko 🏋️ ——— */
   {
-    name: 'SpinandFlix 🏋️',
+    name: 'Spinko 🏋️',
     headerColor: 'gladiator-header-black',
-    logoUrl: 'https://i.imgur.com/Ph4bXZv.png',
-    tagline: '200% Bónus até €1000 & 350 Rodadas Grátis',
+    logoUrl: 'https://i.imgur.com/Vimqnf8.png',
+    tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
     perks: [],
-    affiliateLink: 'https://partners.meratrack.xyz/click?o=723&a=1091',
+    affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjCeYbrF0gqI2Nd7ZgqdRLk/1/',
     statsColor: 'stats-badge-silver',
     stats: [
-      { label: 'Dep. mínimo',    value: '20€' },
-      { label: 'Valor do bónus', value: '200% até €1000' },
+      { label: 'Dep. mínimo',    value: '25€' },
+      { label: 'Valor do bónus', value: '100% até €500' },
       { label: 'Tempo de levant.', value: '0-48h' },
-      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, BTC +' },
+      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, Neteller, BTC +' },
     ],
     backNotes: [
-      ' 1. O valor do bónus deve ser apostado 35x exclusivamente em slots',
-      ' 2. Bónus Máximo: 1000€',
-      ' 3. Prazo: 30 dias para cumprir os requisitos a partir da atribuição do bónus.',
+      ' 1. Primeiro depósito, recebes: 100% de bónus + 100 rodadas grátis na slot Wanted Dead or a Wild (Hacksaw)',
+      ' 2. Segundo depósito, recebes: 80% de bónus + 50 rodadas grátis no slot Mortal Oath',
+      ' 3. Terceiro depósito, recebes: 70% de bónus + 100 rodadas grátis no slot Duel at Dawn',
+      ' 4. Quarto depósito, recebes: 50% de bónus',
+      ' 5. Quinto depósito, recebes: 100% de bónus + 100 rodadas grátis no slot Pirate Bonanza '
+      ' 6. Wager: 40x'
     ],
   },
 ];
