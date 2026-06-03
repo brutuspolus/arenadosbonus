@@ -313,7 +313,7 @@ const sponsorCards = [
   {
     name: 'Spinko 🏋️',
     headerColor: 'gladiator-header-black',
-    logoUrl: 'https://i.imgur.com/MtEGHjm.png',
+    logoUrl: 'https://i.imgur.com/aWBVQb8.png',
     tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjCeYbrF0gqI2Nd7ZgqdRLk/1/',
