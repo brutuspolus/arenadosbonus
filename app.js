@@ -320,9 +320,9 @@ const sponsorCards = [
     statsColor: 'stats-badge-silver',
     stats: [
       { label: 'Dep. mínimo',    value: '25€' },
-      { label: 'Valor do bónus', value: '100% até €500' },
+      { label: 'Valor do bónus', value: '400% até €2200' },
       { label: 'Cashback',       value: 'até 35%' },
-      { label: 'Rodadas grátis', value: '350 FS' },
+      { label: 'Rodadas grátis', value: 'até 350 FS' },
       { label: 'Tempo de levant.', value: '0-48h' },
       { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, Neteller, BTC +' },
     ],
