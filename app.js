@@ -329,7 +329,7 @@ const sponsorCards = [
       ' 2. Segundo depósito, recebes: 80% de bónus + 50 rodadas grátis no slot Mortal Oath',
       ' 3. Terceiro depósito, recebes: 70% de bónus + 100 rodadas grátis no slot Duel at Dawn',
       ' 4. Quarto depósito, recebes: 50% de bónus',
-      ' 5. Quinto depósito, recebes: 100% de bónus + 100 rodadas grátis no slot Pirate Bonanza '
+      ' 5. Quinto depósito, recebes: 100% de bónus + 100 rodadas grátis no slot Pirate Bonanza ',
       ' 6. Wager: 40x'
     ],
   },
