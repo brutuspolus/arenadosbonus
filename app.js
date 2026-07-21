@@ -234,7 +234,7 @@ const sponsorCards = [
       { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, MiFinity, BTC +' },
     ],
     backNotes: [
-      '🎁 4 Bónus de Boas-Vindas Disponíveis',
+      '🎁 5 Bónus de Boas-Vindas Disponíveis',
       '1º - 230% até 2000€',
       '2º - 400 Freespins',
       '3º - 200% até 2000€ + 200 Freespins ',
