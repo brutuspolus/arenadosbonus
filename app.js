@@ -335,6 +335,7 @@ const sponsorCards = [
     logoUrl: 'https://i.imgur.com/FBMB4lB.png',
     tagline: 'ATÉ 3000€ EM BÓNUS',
     perks: [],
+    promoCode: 'BRUTUS'
     affiliateLink: 'https://m.gslotspartners.com/redirect.aspx?mid=1&sid=108&cid=&pid=&affid=62',
     statsColor: 'stats-badge-silver',
     stats: [
