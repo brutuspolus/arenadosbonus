@@ -249,7 +249,7 @@ const sponsorCards = [
   {
     name: 'ROKUBET',
     headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://i.imgur.com/eZgjkV1.png',
+    logoUrl: 'https://i.imgur.com/taZEcOq.png',
     tagline: '50 Freespins SEM DEPÓSITO',
     perks: [],
     affiliateLink: 'https://pt.pjuregrdr.xyz/pt/sign-up?partner=p6759p7050p9657',
@@ -302,12 +302,12 @@ const sponsorCards = [
     /* ——— CARD 9: Spinko 🏋️ ——— */
   {
     name: 'Spinko 🏋️',
-    headerColor: 'gladiator-header-black',
+    headerColor: 'gladiator-header-darkblue',
     logoUrl: 'https://i.imgur.com/aWBVQb8.png',
     tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjCeYbrF0gqI2Nd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-silver',
+    statsColor: 'stats-badge-blue',
     stats: [
       { label: 'Dep. mínimo',    value: '25€' },
       { label: 'Valor do bónus', value: '400% até €2200' },
@@ -329,12 +329,12 @@ const sponsorCards = [
     /* ——— CARD 10: GAMESLOTS 🏋️ ——— */
   {
     name: 'GAMESLOTS 🏋️',
-    headerColor: 'gladiator-header-cream',
+    headerColor: 'gladiator-header-black',
     logoUrl: 'https://i.imgur.com/FBMB4lB.png',
     tagline: 'ATÉ 3000€ EM BÓNUS',
     perks: [],
     affiliateLink: 'https://m.gslotspartners.com/redirect.aspx?mid=1&sid=108&cid=&pid=&affid=62',
-    statsColor: 'stats-badge-cream',
+    statsColor: 'stats-badge-silver',
     stats: [
       { label: 'Dep. mínimo',    value: '10€' },
       { label: 'Valor do bónus', value: 'ATÉ 3000€' },
