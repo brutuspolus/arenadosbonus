@@ -245,11 +245,11 @@ const sponsorCards = [
     ],
   },
 
-  /* ——— CARD 7: TWIN ——— */
+  /* ——— CARD 7: ROKUBET ——— */
   {
     name: 'ROKUBET',
     headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://i.imgur.com/EPgwSei.png',
+    logoUrl: 'https://i.imgur.com/eZgjkV1.png',
     tagline: '50 Freespins SEM DEPÓSITO',
     perks: [],
     affiliateLink: 'https://pt.pjuregrdr.xyz/pt/sign-up?partner=p6759p7050p9657',
@@ -323,6 +323,26 @@ const sponsorCards = [
       ' 4. Quarto depósito, recebes: 50% de bónus',
       ' 5. Quinto depósito, recebes: 100% de bónus + 100 rodadas grátis no slot Pirate Bonanza ',
       ' 6. Wager: 40x'
+    ],
+  },
+  
+    /* ——— CARD 10: GAMESLOTS 🏋️ ——— */
+  {
+    name: 'GAMESLOTS 🏋️',
+    headerColor: 'gladiator-header-cream',
+    logoUrl: 'https://i.imgur.com/FBMB4lB.png',
+    tagline: 'ATÉ 3000€ EM BÓNUS',
+    perks: [],
+    affiliateLink: 'https://m.gslotspartners.com/redirect.aspx?mid=1&sid=108&cid=&pid=&affid=62',
+    statsColor: 'stats-badge-cream',
+    stats: [
+      { label: 'Dep. mínimo',    value: '10€' },
+      { label: 'Valor do bónus', value: 'ATÉ 3000€' },
+      { label: 'Tempo de levant.', value: '0-48h' },
+      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, Neteller, BTC +' },
+    ],
+    backNotes: [
+      ' 1. ATÉ 3000€ EM BÓNUS',
     ],
   },
 ];
