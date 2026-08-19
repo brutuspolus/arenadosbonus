@@ -252,6 +252,8 @@ const sponsorCards = [
     logoUrl: 'https://i.imgur.com/taZEcOq.png',
     tagline: '50 Freespins SEM DEPÓSITO',
     perks: [],
+    promoCode: 'BRUTUS',
+    badgeText: '50 FS Sem Depósito',
     affiliateLink: 'https://pt.pjuregrdr.xyz/pt/sign-up?partner=p6759p7050p9657',
     statsColor: 'stats-badge-blue',
     stats: [
