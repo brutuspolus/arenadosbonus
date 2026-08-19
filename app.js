@@ -249,7 +249,7 @@ const sponsorCards = [
   {
     name: 'ROKUBET',
     headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://i.imgur.com/mAcJ7N5.jpeg',
+    logoUrl: 'https://i.imgur.com/EPgwSei.png',
     tagline: '50 Freespins SEM DEPÓSITO',
     perks: [],
     affiliateLink: 'https://pt.pjuregrdr.xyz/pt/sign-up?partner=p6759p7050p9657',
