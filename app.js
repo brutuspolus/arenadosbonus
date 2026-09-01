@@ -245,37 +245,7 @@ const sponsorCards = [
     ],
   },
 
-  /* ——— CARD 7: ROKUBET ——— */
-  {
-    name: 'ROKUBET',
-    headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://i.imgur.com/taZEcOq.png',
-    tagline: '50 Freespins SEM DEPÓSITO',
-    perks: [],
-    promoCode: 'BRUTUS',
-    badgeText: '50 FS Sem Depósito',
-    affiliateLink: 'https://pt.pjuregrdr.xyz/pt/sign-up?partner=p6759p7050p9657',
-    statsColor: 'stats-badge-blue',
-    stats: [
-      { label: 'Rodadas grátis', value: '50 FS' },
-      { label: 'Tempo de levant.', value: '0-24h' },
-      { label: 'Limite de levant.', value: '€50k/mês' },
-      { label: 'Tempo pendente', value: '0-96h' },
-      { label: 'Cripto',         value: 'Sim' },
-      { label: 'Apps móveis',    value: 'iOS & Android' },
-      { label: 'Desportos',      value: 'Sim' },
-      { label: 'Mét. depósito',  value: 'Visa, MBWAY, MC, Skrill, MiFinity, BTC +' },
-    ],
-    backNotes: [
-      'Bonus Boas-Vindas 335% Bónus + 335 Freespins',
-      'Métodos: Visa, MBWAY, MC, Skrill, Neteller, MiFinity, eZeeWallet, MuchBetter',
-      'Cripto: Bitcoin, ETH, Tether, LTC, DOGE, TRON',
-      'Casino ao vivo, Apps móveis (iOS & Android), Desportos',
-      '18+ | T&C Aplicam-se',
-    ],
-  },
-
-  /* ——— CARD 8: DBbet ⚽ ——— */
+  /* ——— CARD 7: DBbet ⚽ ——— */
   {
     name: 'DBbet ⚽',
     headerColor: 'gladiator-header-pink',
@@ -301,7 +271,7 @@ const sponsorCards = [
     ],
   },
 
-    /* ——— CARD 9: Spinko 🏋️ ——— */
+    /* ——— CARD 8: Spinko 🏋️ ——— */
   {
     name: 'Spinko 🏋️',
     headerColor: 'gladiator-header-darkblue',
@@ -328,7 +298,7 @@ const sponsorCards = [
     ],
   },
   
-    /* ——— CARD 10: GAMESLOTS 🏋️ ——— */
+    /* ——— CARD 9: GAMESLOTS 🏋️ ——— */
   {
     name: 'GAMESLOTS 🏋️',
     headerColor: 'gladiator-header-black',
