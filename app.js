@@ -140,12 +140,12 @@ const sponsorCards = [
   /* ——— CARD 4: RIOACE ——— */
   {
     name: 'RIOACE',
-    headerColor: 'gladiator-header-darkblue',
+    headerColor: 'gladiator-header-cream',
     logoUrl: 'https://i.imgur.com/YOiAa7X.png',
     tagline: '400% Bónus + 350 Freespins',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIhZNvOoThXn9GNd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-blue',
+    statsColor: 'stats-badge-cream',
     stats: [
       { label: 'Dep. mínimo',    value: '20€' },
       { label: 'Valor do bónus', value: '400% até €2.2k' },
@@ -176,12 +176,12 @@ const sponsorCards = [
   /* ——— CARD 5: STELARIO ——— */
   {
     name: 'STELARIO',
-    headerColor: 'gladiator-header-cream',
+    headerColor: 'gladiator-header-limegreen',
     logoUrl: 'https://i.imgur.com/GrdJfd0.png',
     tagline: '100% até 300€ + 100 Freespins',
     perks: [],
     affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjsP_BZ5nQwFmNd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-cream',
+    statsColor: 'stats-badge-green',
     stats: [
       { label: 'Dep. mínimo',    value: '€25' },
       { label: 'Valor do bónus', value: '100% até €300' },
