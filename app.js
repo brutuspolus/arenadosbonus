@@ -216,7 +216,7 @@ const sponsorCards = [
   {
     name: 'Windetta Casino',
     headerColor: 'gladiator-header-purple',
-    logoUrl: 'https://i.imgur.com/Jl3SSre.png',
+    logoUrl: 'https://i.imgur.com/bXQ0zOt.png',
     tagline: 'Casino',
     perks: [],
     badgeText: 'Escolhe o teu Bónus',
