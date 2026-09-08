@@ -323,7 +323,7 @@ const sponsorCards = [
   {
     name: 'SpinLine',
     headerColor: 'gladiator-header-limegreen',
-    logoUrl: 'https://i.imgur.com/38z34E0.png',
+    logoUrl: 'https://i.imgur.com/L09chMy.png',
     tagline: '100% até 300€ + 200 Freespins',
     perks: [],
     badgeText: 'Novo',
