@@ -322,13 +322,13 @@ const sponsorCards = [
   /* ——— CARD 10: SPINLINE ——— */
   {
     name: 'SpinLine',
-    headerColor: 'gladiator-header-limegreen',
-    logoUrl: 'https://i.imgur.com/L09chMy.png',
+    headerColor: 'gladiator-header-cream',
+    logoUrl: 'https://i.imgur.com/u9s4sBM.png',
     tagline: '100% até 300€ + 200 Freespins',
     perks: [],
     badgeText: 'Novo',
     affiliateLink: 'https://partners.meratrack.xyz/click?o=996&a=1091',
-    statsColor: 'stats-badge-green',
+    statsColor: 'stats-badge-cream',
     stats: [
       { label: 'Dep. mínimo',    value: '€20' },
       { label: 'Valor do bónus', value: '100% até €300' },
