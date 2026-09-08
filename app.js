@@ -318,6 +318,36 @@ const sponsorCards = [
       ' 1. ATÉ 3000€ EM BÓNUS',
     ],
   },
+
+  /* ——— CARD 10: SPINLINE ——— */
+  {
+    name: 'SpinLine',
+    headerColor: 'gladiator-header-limegreen',
+    logoUrl: 'https://dibv43v5qvczy.cloudfront.net/tenant2c6d3f79-41c3-4a38-99bb-0efbe511b6c2/MyqJnaYEE8nUnSdYSpvOY9DM4ZzCvQPbmw8LGTdl.png',
+    tagline: '100% até 300€ + 200 Freespins',
+    perks: [],
+    badgeText: 'Novo',
+    affiliateLink: 'https://partners.meratrack.xyz/click?o=996&a=1091',
+    statsColor: 'stats-badge-green',
+    stats: [
+      { label: 'Dep. mínimo',    value: '€20' },
+      { label: 'Valor do bónus', value: '100% até €300' },
+      { label: 'Rodadas grátis', value: '200 FS' },
+      { label: 'Tempo de levant.', value: 'N/A' },
+      { label: 'Rollover',       value: '40x' },
+      { label: 'Ganho máx.',     value: '10x o valor do bonus' },
+      { label: 'Mét. depósito',  value: 'Visa, MC, MB Way, Cripto +' },
+    ],
+    backNotes: [
+      '💰 Depósito de 20 €: 100% até 50 € + 30 RG',
+      'Depósito de 50 €: 100% até 200 € + 80 RG',
+      'Depósito de 200 €: 100% até 300 € + 200 RG',
+      'Depósito mínimo: €20',
+      'Rollover: 40x',
+      'Após completar o rollover, o máximo que pode ganhar com o bónus é 10x do valor depositado do bonus',
+      '18+ | T&C Aplicam-se',
+    ],
+  },  
 ];
 
 
