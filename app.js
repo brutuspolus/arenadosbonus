@@ -4,7 +4,7 @@
  * ============================================================
  *  Contains:
  *    1. SVG Icon definitions
- *    2. Card data array
+ *    2. Live admin offer data
  *    3. Card HTML generation
  *    4. Age gate + flip + click handlers
  * ============================================================
@@ -34,337 +34,59 @@ const FRONT_STATS_LABELS = [
 
 
 /* ==========================================================
- *  3. SPONSOR CARD DATA
+ *  3. LIVE OFFER DATA
  * ========================================================== */
-const sponsorCards = [
+// Public feed configuration lives on the app.js script tag in index.html.
+const feedUrl = document.currentScript?.dataset.offersUrl;
 
-  /* ——— CARD 1: SMOKING ACE ——— */
-  {
-    name: 'SMOKING ACE',
-    headerColor: 'gladiator-header-black',
-    logoUrl: 'https://i.imgur.com/IzGDLVV.png',
-    tagline: '125% no 1º Depósito + 125 Freespins',
-    perks: [],
-    promoCode: 'Brutus',
-    badgeText: '10 FS Sem Depósito',
-    affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIiQAbEseutvtGNd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-silver',
-    stats: [
-      { label: 'Dep. mínimo',    value: '€25' },
-      { label: 'Valor do bónus', value: '225% até €2k' },
-      { label: 'Rodadas grátis', value: '225 FS' },
-      { label: 'Tempo de levant.', value: '0-24h' },
-      { label: 'Rollover',       value: '50x' },
-      { label: 'Ganho máx.',     value: '25€' },
-      { label: 'Limite de levant.', value: '€50k/mês' },
-      { label: 'Cripto',         value: 'Sim' },
-      { label: 'Clube VIP',      value: 'Sim' },
-      { label: 'Mét. depósito',  value: 'Visa, MC, Skrill, BTC, ETH +' },
-    ],
-    backNotes: [
-      '1º Depósito: 125% + 125 Freespins (código: Brutus)',
-      '10 Freespins sem depósito no registo',
-      'Rollover: 50x | Ganho máx: 25€',
-      'Depósito mínimo: €25 | Sem taxas',
-      'Levantamento mínimo: €20 | Sem taxas',
-      'Limites: €1.000/transação, €3.000/dia, €50.000/mês',
-      'Carteiras digitais: 24-48h | Cripto: 0-48h | Banco: 3-7 dias',
-      'Métodos: Visa, MC, Skrill, Neteller, Bitcoin, ETH, TRON, Tether, Paysafecard',
-      'Verificação: 0-24h | Levantamentos ao fim de semana: Sim',
-      'Jackpots progressivos pagos na totalidade',
-      'Estabelecido: 2023 | Empresa: Altacore N.V.',
-      '18+ | T&C Aplicam-se',
-    ],
-  },
+function safeUrl(value) {
+  try {
+    const url = new URL(value);
+    return ['https:', 'http:'].includes(url.protocol) ? url.href : '';
+  } catch { return ''; }
+}
 
-  /* ——— CARD 2: WINHUGO ——— */
-  {
-    name: 'WINHUGO',
-    headerColor: 'gladiator-header-limegreen',
-    logoUrl: 'https://dibv43v5qvczy.cloudfront.net/tenant2c6d3f79-41c3-4a38-99bb-0efbe511b6c2/MyqJnaYEE8nUnSdYSpvOY9DM4ZzCvQPbmw8LGTdl.png',
-    tagline: '100% até 1000€ + 100 Freespins',
-    perks: [],
-    promoCode: 'brutus',
-    badgeText: 'Non-Sticky Bónus',
-    affiliateLink: 'https://www.winhugo1.com/a/brutus',
-    statsColor: 'stats-badge-green',
+function offerToCard(offer) {
+  const color = /^#[0-9a-f]{6}$/i.test(offer.logoBg || '') ? offer.logoBg : '#383838';
+  return {
+    id: String(offer.id),
+    name: String(offer.name || ''),
+    headerColor: 'gladiator-header-live',
+    statsColor: 'stats-badge-live',
+    color,
+    logoUrl: safeUrl(offer.logoUrl || offer.bannerUrl),
+    logoScale: Math.max(0.5, Math.min(2, Number(offer.logoScale) || 1)),
+    tagline: offer.headline || '',
+    promoCode: offer.code && offer.code !== '—' ? offer.code : '',
+    badgeText: offer.tags?.[0] || offer.badge || '',
+    isFeatured: Boolean(offer.featured),
+    affiliateLink: safeUrl(offer.url),
+    ctaLabel: offer.ctaLabel || 'Registar Agora',
     stats: [
-      { label: 'Dep. mínimo',    value: '€10' },
-      { label: 'Valor do bónus', value: '100% até €1k' },
-      { label: 'Rodadas grátis', value: '100 FS' },
-      { label: 'Tempo de levant.', value: 'N/A' },
-      { label: 'Rollover',       value: '25x' },
-      { label: 'Ganho máx.',     value: '100% dep.' },
-      { label: 'Mét. depósito',  value: 'Visa, MC, MB Way, Cripto +' },
-    ],
-    backNotes: [
-      '🎁 Bónus: 100% até 1000€ + 100 Freespins',
-      'Bónus Non-Sticky (pode levantar saldo real a qualquer momento)',
-      '1º Depósito: 100% até €1.000 + 100 Freespins (código: brutus)',
-      'Depósito mínimo: €10',
-      'Rollover: 25x',
-      'Após completar o rollover, o máximo que pode ganhar com o bónus é 100% do valor depositado.',
-      'Exemplo: depositar 100€ → ganho máximo com bónus: 100€',
-      '18+ | T&C Aplicam-se',
-    ],
-  },
+      { label: FRONT_STATS_LABELS[0], value: offer.minDeposit || '—' },
+      { label: FRONT_STATS_LABELS[1], value: offer.bonusValue || '—' },
+      { label: FRONT_STATS_LABELS[2], value: offer.freeSpins || '—' },
+      { label: FRONT_STATS_LABELS[3], value: offer.withdrawTime || '—' },
+      { label: 'Cashback', value: offer.cashback },
+      { label: 'Licença', value: offer.license },
+      { label: 'Estabelecido', value: offer.established },
+    ].filter(stat => stat.value),
+    backNotes: [offer.headline, ...(Array.isArray(offer.notes) ? offer.notes : []),
+      ...(Array.isArray(offer.tags) ? offer.tags : [])].filter(Boolean),
+  };
+}
 
-  /* ——— CARD 3: LOLLYSPINS 🍭 ——— */
-  {
-    name: 'LOLLYSPINS 🍭',
-    headerColor: 'gladiator-header-pink',
-    logoUrl: 'https://i.imgur.com/He5Iwgb.png',
-    tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
-    perks: [],
-    affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIiBYt4A521OEWNd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-pink',
-    stats: [
-      { label: 'Dep. mínimo',    value: '25€' },
-      { label: 'Cashback',       value: '35%' },
-      { label: 'Valor do bónus', value: '400% até €2.2k' },
-      { label: 'Rodadas grátis', value: '350 FS' },
-      { label: 'Tempo de levant.', value: '0-24h' },
-      { label: 'Mét. depósito',  value: 'Visa, MC, Skrill, BTC +' },
-    ],
-    backNotes: [
-      'Depósito mínimo: 25€',
-      '1º depósito: 100% de bônus + 100 Freespins Wanted Dead or a Wild (Hacksaw)',
-      '2º depósito: 80% de bônus + 50 Freespins Razor Returns (Push Gaming)',
-      '3º depósito: 70% de bônus + 100 Freespins Duel at Dawn (Hacksaw)',
-      '4º depósito: 50% de bônus',
-      '5º depósito: 100% de bônus + 100 Freespins Pirate Bonanza (Hacksaw)',
-      '24/7 Suporte ao vivo (para ajuda com rodadas grátis)',
-    ],
-  },
-
-  /* ——— CARD 4: RIOACE ——— */
-  {
-    name: 'RIOACE',
-    headerColor: 'gladiator-header-cream',
-    logoUrl: 'https://i.imgur.com/YOiAa7X.png',
-    tagline: '400% Bónus + 350 Freespins',
-    perks: [],
-    affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIhZNvOoThXn9GNd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-cream',
-    stats: [
-      { label: 'Dep. mínimo',    value: '20€' },
-      { label: 'Valor do bónus', value: '400% até €2.2k' },
-      { label: 'Rodadas grátis', value: '350 FS' },
-      { label: 'Tempo de levant.', value: '0-24h' },
-      { label: 'Limite de levant.', value: '€50k/mês' },
-      { label: 'Tempo pendente', value: '0-96h' },
-      { label: 'Cripto',         value: 'Sim' },
-      { label: 'Apps móveis',    value: 'iOS & Android' },
-      { label: 'Desportos',      value: 'Sim' },
-      { label: 'Mét. depósito',  value: 'Visa, MC, Skrill, MiFinity, BTC +' },
-    ],
-    backNotes: [
-      '400% Bónus + 350 Freespins no 1º depósito',
-      'Depósito mínimo: €25 | Sem taxas de depósito',
-      'Sem taxas de levantamento',
-      'Limites: €10.000/dia, €50.000/mês',
-      'Carteiras digitais: 24-48h | Banco: 1-7 dias',
-      'Tempo pendente: 0-96h | Sem levantamentos ao fim de semana',
-      'Métodos: Visa, MC, Skrill, Neteller, MiFinity, eZeeWallet, MuchBetter',
-      'Cripto: Bitcoin, ETH, Tether, LTC, DOGE, TRON',
-      'Casino ao vivo, Apps móveis (iOS & Android), Desportos',
-      'Estabelecido: 2024 | Empresa: Altacore N.V.',
-      '18+ | T&C Aplicam-se',
-    ],
-  },
-
-  /* ——— CARD 5: STELARIO ——— */
-  {
-    name: 'STELARIO',
-    headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://i.imgur.com/BCoqD0u.png',
-    tagline: '100% até 300€ + 100 Freespins',
-    perks: [],
-    affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjsP_BZ5nQwFmNd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-blue',
-    stats: [
-      { label: 'Dep. mínimo',    value: '€25' },
-      { label: 'Valor do bónus', value: '100% até €300' },
-      { label: 'Rodadas grátis', value: '100 FS' },
-      { label: 'Tempo de levant.', value: '0-48h' },
-      { label: 'Rollover',       value: '40x' },
-      { label: 'Levant. mínimo', value: '€20' },
-      { label: 'Limite de levant.', value: '€10.000/mês' },
-      { label: 'Cripto',         value: 'Sim' },
-      { label: 'Clube VIP',      value: 'Sim' },
-      { label: 'Mét. depósito',  value: 'Visa, MC, Skrill, Payz, BTC +' },
-    ],
-    backNotes: [
-      '🎁 Bónus: 100% até 300€ + 100 Freespins (Gates of Olympus)',
-      'Depósito mínimo: €25 | Aposta máxima: €5',
-      'Freespins creditadas a cada 24h (25 Freespins por dia)',
-      'Rollover: 40x',
-      'Levantamento mínimo: €20 | Sem taxas de levantamento',
-      'Limites: €400/transação, €400/dia, €10.000/mês',
-      'Carteiras digitais: 0-1h | Cripto: 0-1h | Banco: 5-7 dias | Cartões: 5-7 dias',
-      'Levantamentos ao fim de semana: Sim | Jackpots pagos na totalidade',
-      'Métodos: Visa, MC, Skrill, Neteller, Payz, Bitcoin, LTC, ETH, Trustly, Transferência, Interac, Discover, MiFinity, Paysafecard',
-      'Verificação: 0-24h | Tempo pendente: 24-48h',
-      'Tipo: Casino Instantâneo, Móvel, Casino ao Vivo, Casino Cripto',
-      "Fornecedores: Pragmatic Play, Play'n GO, Yggdrasil, Push Gaming, NetEnt, Evolution, Big Time Gaming, Nolimit City e mais",
-      'Estabelecido: 2020 | Empresa: Altacore N.V.',
-      '18+ | T&C Aplicam-se',
-    ],
-  },
-
-  /* ——— CARD 6:  Windetta Casino——— */
-  {
-    name: 'Windetta Casino',
-    headerColor: 'gladiator-header-purple',
-    logoUrl: 'https://i.imgur.com/TWSvgYw.png',
-    tagline: 'Casino',
-    perks: [],
-    badgeText: 'Escolhe o teu Bónus',
-    affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIgxE7I3F4wd8mNd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-purple',
-    stats: [
-      { label: 'Dep. mínimo',    value: '€25' },
-      { label: 'Valor do bónus', value: '230% até €2000' },
-      { label: 'Rodadas grátis', value: 'Até 400 FS' },
-      { label: 'Tempo de levant.', value: '0-24h' },
-      { label: 'Limite de levant.', value: '€10.000/mês' },
-      { label: 'Tempo pendente', value: '0-48h' },
-      { label: 'Cripto',         value: 'Sim' },
-      { label: 'Clube VIP',      value: 'Sim' },
-      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, MiFinity, BTC +' },
-    ],
-    backNotes: [
-      '🎁 5 Bónus de Boas-Vindas Disponíveis',
-      '1º - 230% até 2000€',
-      '2º - 400 Freespins',
-      '3º - 200% até 2000€ + 200 Freespins ',
-      '4º - 150% até 2000€ + 300 Freespins',
-      '5º - 180% até 2000€ + 200 Freespins',
-      'Métodos: Mbway, Visa, Skrill, Neteller, etc,',
-      '18+ | T&C Aplicam-se',
-    ],
-  },
-
-  /* ——— CARD 7: DBbet ⚽ ——— */
-  {
-    name: 'DBbet ⚽',
-    headerColor: 'gladiator-header-pink',
-    logoUrl: 'https://i.imgur.com/V3rhnV9.png',
-    tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
-    perks: [],
-    promoCode: 'BRUTUS',
-    affiliateLink: 'https://dbbt.me/BRUTUS',
-    statsColor: 'stats-badge-cream',
-    stats: [
-      { label: 'Dep. mínimo',    value: '10€' },
-      { label: 'Valor do bónus', value: '100% até €300' },
-      { label: 'Rodadas grátis', value: '30 FS' },
-      { label: 'Tempo de levant.', value: '0-24h' },
-      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, BTC +' },
-    ],
-    backNotes: [
-      ' 1. Crie uma conta, preencha todos os seus dados pessoais e ative o seu número de telefone.',
-      ' 2. Este bónus está disponível se tiver completado o seu perfil, preenchido todos os campos e ativado o seu número de telefone.',
-      ' 3. O bónus será creditado automaticamente após a realização do depósito, desde que os dados pessoais do cliente tenham sido preenchidos na íntegra em A Minha Conta e o seu número de telefone tenha sido ativado.',
-      ' 4. Antes de fazer um depósito, deve de certificar-se de que concordou em receber bónus do casino nas configurações da sua conta em A Minha Conta ou diretamente na página Depósito.',
-      '24/7 Suporte ao vivo (para ajuda com rodadas grátis)',
-    ],
-  },
-
-    /* ——— CARD 8: Spinko 🏋️ ——— */
-  {
-    name: 'Spinko 🏋️',
-    headerColor: 'gladiator-header-darkblue',
-    logoUrl: 'https://i.imgur.com/aWBVQb8.png',
-    tagline: '400% Bónus até €2200 & 350 Rodadas Grátis',
-    perks: [],
-    affiliateLink: 'https://record.joinaff.com/_hwHCWKmquIjCeYbrF0gqI2Nd7ZgqdRLk/1/',
-    statsColor: 'stats-badge-blue',
-    stats: [
-      { label: 'Dep. mínimo',    value: '25€' },
-      { label: 'Valor do bónus', value: '400% até €2200' },
-      { label: 'Cashback',       value: 'até 35%' },
-      { label: 'Rodadas grátis', value: 'até 350 FS' },
-      { label: 'Tempo de levant.', value: '0-48h' },
-      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, Neteller, BTC +' },
-    ],
-    backNotes: [
-      ' 1. Primeiro depósito, recebes: 100% de bónus + 100 rodadas grátis na slot Wanted Dead or a Wild (Hacksaw)',
-      ' 2. Segundo depósito, recebes: 80% de bónus + 50 rodadas grátis no slot Mortal Oath',
-      ' 3. Terceiro depósito, recebes: 70% de bónus + 100 rodadas grátis no slot Duel at Dawn',
-      ' 4. Quarto depósito, recebes: 50% de bónus',
-      ' 5. Quinto depósito, recebes: 100% de bónus + 100 rodadas grátis no slot Pirate Bonanza ',
-      ' 6. Wager: 40x'
-    ],
-  },
-  
-    /* ——— CARD 9: GAMESLOTS 🏋️ ——— */
-  {
-    name: 'GAMESLOTS 🏋️',
-    headerColor: 'gladiator-header-black',
-    logoUrl: 'https://i.imgur.com/FBMB4lB.png',
-    tagline: 'ATÉ 3000€ EM BÓNUS',
-    perks: [],
-    promoCode: 'BRUTUS',
-    affiliateLink: 'https://m.gslotspartners.com/redirect.aspx?mid=1&sid=108&cid=&pid=&affid=62',
-    statsColor: 'stats-badge-silver',
-    stats: [
-      { label: 'Dep. mínimo',    value: '10€' },
-      { label: 'Valor do bónus', value: 'ATÉ 3000€' },
-      { label: 'Tempo de levant.', value: '0-48h' },
-      { label: 'Mét. depósito',  value: 'Mbway, Visa, MC, Skrill, Neteller, BTC +' },
-    ],
-    backNotes: [
-      ' 1. ATÉ 3000€ EM BÓNUS',
-    ],
-  },
-
-  /* ——— CARD 10: SPINLINE ——— */
-  {
-    name: 'SpinLine',
-    headerColor: 'gladiator-header-cream',
-    logoUrl: 'https://i.imgur.com/kxC9EOk.png',
-    tagline: '100% até 300€ + 200 Freespins',
-    perks: [],
-    badgeText: 'Novo',
-    affiliateLink: 'https://partners.meratrack.xyz/click?o=996&a=1091',
-    statsColor: 'stats-badge-cream',
-    stats: [
-      { label: 'Dep. mínimo',    value: '€20' },
-      { label: 'Valor do bónus', value: '100% até €300' },
-      { label: 'Rodadas grátis', value: '200 FS' },
-      { label: 'Tempo de levant.', value: 'N/A' },
-      { label: 'Rollover',       value: '40x' },
-      { label: 'Ganho máx.',     value: '10x o valor do bonus' },
-      { label: 'Mét. depósito',  value: 'Visa, MC, MB Way, Cripto +' },
-    ],
-    backNotes: [
-      '💰 Depósito de 20 €: 100% até 50 € + 30 RG',
-      'Depósito de 50 €: 100% até 200 € + 80 RG',
-      'Depósito de 200 €: 100% até 300 € + 200 RG',
-      'Depósito mínimo: €20',
-      'Rollover: 40x',
-      'Após completar o rollover, o máximo que pode ganhar com o bónus é 10x do valor depositado do bonus',
-      '18+ | T&C Aplicam-se',
-    ],
-  },  
-];
 
 
 /* ==========================================================
  *  4. HELPER — Render card name (LollySpins special branding)
  * ========================================================== */
-function renderCardName(name) {
-  if (name === 'LOLLYSPINS 🍭') {
-    return '<span class="text-pink">LOLLY</span><span class="text-yellow">SPINS</span> 🍭';
-  }
-  return escapeHTML(name);
-}
+function renderCardName(name) { return escapeHTML(name); }
 
 function escapeHTML(str) {
-  const div = document.createElement('div');
-  div.textContent = str;
-  return div.innerHTML;
+  return String(str ?? '').replace(/[&<>"']/g, char => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[char]));
 }
 
 
@@ -381,7 +103,7 @@ function createCardHTML(card) {
   const hasBackFace = !!(card.stats || card.termsAndConditions);
   const badgeClass = card.statsColor || 'stats-badge';
   const logoLargeClass = card.logoSize === 'large' ? ' logo-large' : '';
-  const filterStyle = card.logoFilter ? ` style="filter: ${card.logoFilter};"` : '';
+  const filterStyle = ` style="transform:scale(${card.logoScale});"`;
 
   /* --- Header content --- */
   let headerInner = '';
@@ -401,7 +123,7 @@ function createCardHTML(card) {
 
   if (card.logoUrl) {
     headerInner += `
-      <img src="${card.logoUrl}" alt="${escapeHTML(card.name)}" class="card-logo${logoLargeClass}"${filterStyle}>`;
+      <img src="${escapeHTML(card.logoUrl)}" alt="${escapeHTML(card.name)}" class="card-logo${logoLargeClass}"${filterStyle}>`;
   } else {
     headerInner += `
       <h3 class="card-title">${renderCardName(card.name)}</h3>`;
@@ -512,7 +234,7 @@ function createCardHTML(card) {
   let backHeaderInner = '';
   if (card.logoUrl) {
     backHeaderInner = `
-      <img src="${card.logoUrl}" alt="${escapeHTML(card.name)}" class="card-logo${logoLargeClass}"${filterStyle}>`;
+      <img src="${escapeHTML(card.logoUrl)}" alt="${escapeHTML(card.name)}" class="card-logo${logoLargeClass}"${filterStyle}>`;
   } else {
     backHeaderInner = `
       <h3 class="card-title">${renderCardName(card.name)}</h3>`;
@@ -520,7 +242,7 @@ function createCardHTML(card) {
 
   /* --- Assemble the full card --- */
   return `
-    <div class="card-flip-container" data-link="${card.affiliateLink || '#'}">
+    <div class="card-flip-container" data-id="${escapeHTML(card.id)}" style="--offer-color:${card.color}" data-link="${escapeHTML(card.affiliateLink || '#')}">
       <div class="card-flip-inner">
 
         <!-- FRONT FACE -->
@@ -534,7 +256,7 @@ function createCardHTML(card) {
             ${perksHTML}
             <div class="card-bottom">
               ${promoFrontHTML}
-              <button class="btn-gladiator register-btn">Registar Agora</button>
+              <button class="btn-gladiator register-btn">${escapeHTML(card.ctaLabel)}</button>
               ${tcFlipHTML}
             </div>
           </div>
@@ -550,10 +272,10 @@ function createCardHTML(card) {
             ${backBodyHTML}
             ${promoBackHTML}
             <div class="card-bottom">
-              <a href="${card.affiliateLink || '#'}" target="_blank" rel="noopener noreferrer"
+              <a href="${escapeHTML(card.affiliateLink || '#')}" target="_blank" rel="noopener noreferrer"
                  class="btn-gladiator register-btn register-link"
                  onclick="event.stopPropagation();">
-                Registar Agora
+                ${escapeHTML(card.ctaLabel)}
               </a>
             </div>
           </div>
@@ -571,7 +293,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
   /* --- Render all cards into the grid --- */
   const grid = document.getElementById('cards-grid');
-  grid.innerHTML = sponsorCards.map(createCardHTML).join('');
+  const status = document.getElementById('offers-status');
+  let inFlight = false;
+  let lastPayload = '';
+  async function loadOffers() {
+    if (inFlight) return;
+    inFlight = true;
+    try {
+      if (!safeUrl(feedUrl)) throw new Error('Invalid feed configuration');
+      const response = await fetch(feedUrl, { cache: 'no-store', credentials: 'omit', signal: AbortSignal.timeout(10000) });
+      if (!response.ok) throw new Error('Feed unavailable');
+      const data = await response.json();
+      if (!data || !Array.isArray(data.offers) || !('site' in data)) throw new Error('Invalid feed');
+      const offers = data.site?.active ? data.offers : [];
+      const payload = JSON.stringify(offers);
+      if (payload !== lastPayload) {
+        const flipped = new Set(Array.from(grid.querySelectorAll('.card-flipped'), inner => inner.closest('[data-id]').dataset.id));
+        grid.innerHTML = offers.map(offerToCard).map(createCardHTML).join('');
+        grid.querySelectorAll('[data-id]').forEach(card => {
+          if (flipped.has(card.dataset.id)) card.querySelector('.card-flip-inner').classList.add('card-flipped');
+        });
+        lastPayload = payload;
+      }
+      status.textContent = offers.length ? '' : 'Sem ofertas disponíveis de momento.';
+    } catch {
+      status.textContent = grid.children.length
+        ? 'Não foi possível atualizar as ofertas. A tentar novamente em breve.'
+        : 'Ofertas indisponíveis de momento. A tentar novamente em breve.';
+    } finally { inFlight = false; }
+  }
+  loadOffers();
+  window.setInterval(() => { if (!document.hidden) loadOffers(); }, 30000);
+  document.addEventListener('visibilitychange', () => { if (!document.hidden) loadOffers(); });
 
   /* --- Age Gate --- */
   const ageGate = document.getElementById('age-gate');
